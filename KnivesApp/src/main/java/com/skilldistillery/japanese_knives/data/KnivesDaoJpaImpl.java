@@ -1,5 +1,7 @@
 package com.skilldistillery.japanese_knives.data;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -29,17 +31,23 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 	public boolean delete(Integer id) {
 		em.remove(em.find(Knives.class, id));
 		Knives knives = em.find(Knives.class, id);
-		return false;
-		
+		if (knives != null) {
+			return false;
+		}
+		return true;
+
 	}
 
-	public void findAll() {
-		
+	public List<Knives> findAll() {
+		String sql = "SELECT knives FROM Knives knives";
+		List<Knives> knives = em.createQuery(sql, Knives.class).getResultList();
+		return knives;
 	}
-	
-	public void update() {
-		
-		
+
+	public Knives update(Knives knives, Integer id) {
+		Knives uKnives = em.find(Knives.class, id);
+		uKnives.setName(knives.getName());
+		return uKnives;
 	}
 
 }

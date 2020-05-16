@@ -14,12 +14,12 @@
 <body>
 
 
-	<div class=container-fluid>
+	<div class="container-fluid mt-5">
 		<div class="text-center">
 
 
-			<p>Knives: ${knives.name}
-			<p><p>maker: ${knives.maker}</p>
+			<p class="badge badge-pill badge-primary">Knives: ${knives.name}
+			<p>maker: ${knives.maker}</p>
 			<p>construction: ${knives.construction}</p>
 			<p>steel: ${knives.steel}</p>
 			<p>cladding: ${knives.cladding}</p>
@@ -35,6 +35,10 @@
 			<img src="resources/KNIFEimg/${knives.imgLink}" class="img-fluid"
 				alt="Responsive image">
 
+			<!-- <audio controls autoplay>
+				
+				<source src="resources/KNIFEimg/music.mp3" type="audio/mpeg">
+			</audio> -->
 
 
 

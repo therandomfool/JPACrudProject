@@ -23,8 +23,7 @@ public class KnivesController {
 
 	@RequestMapping(path = "home.do")
 	private String home(Model model) {
-		return "index.jsp";
-
+		return "index.jsp";		
 	}
 
 }
