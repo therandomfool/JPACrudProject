@@ -13,6 +13,7 @@ public class Knives {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
+	@Column(name="type")
 	private String name;
 
 	private String maker;
