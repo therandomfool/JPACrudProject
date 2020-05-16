@@ -13,12 +13,18 @@ import com.skilldistillery.japanese_knives.entities.Knives;
 public class KnivesController {
 	@Autowired
 	private KnivesDAO dao;
-	
-	
+
 	@RequestMapping(path = "getKnives.do")
 	public String findKnives(@RequestParam Integer kid, Model model) {
 		Knives k = dao.findById(kid);
 		model.addAttribute("knives", k);
 		return "knivesDetail";
 	}
+
+	@RequestMapping(path = "home.do")
+	private String home(Model model) {
+		return null;
+
+	}
+
 }
