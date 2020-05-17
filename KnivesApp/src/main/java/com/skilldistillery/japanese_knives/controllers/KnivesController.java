@@ -87,8 +87,8 @@ public class KnivesController {
 		return mv;
 	}
 
-	@RequestMapping(path = "goToDelete.do", params = "kid", method = RequestMethod.GET)
-	public ModelAndView takeToDeleteForm(int kid) {
+	@RequestMapping(path = "goToDelete.do")
+	public ModelAndView takeToDeleteForm(Integer kid) {
 		ModelAndView mv = new ModelAndView();
 		Knives toDelete = dao.findById(kid);
 		mv.addObject("knives", toDelete);
