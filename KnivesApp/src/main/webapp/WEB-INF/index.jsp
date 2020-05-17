@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Musashi's Knife Shop</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -25,11 +25,11 @@
 			aria-expanded="false">CHOICES</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 			<a class="dropdown-item" href="goToKeyword.do">Japanese KnivesBy Keyword</a> 
-			<a class="dropdown-item" href="getKnives.do">List Japanese Knives by ID</a> 
-			<a class="dropdown-item" href="#">Create Your Own Custom Japanese Knife</a>
-			<a class="dropdown-item" href="#">Delete Any Japanese Knife In Our Collection</a>
-			<a class="dropdown-item" href="#">Modify A Japanese Knife</a>
-			<a class="dropdown-item" href="#">Exit</a>
+			<a class="dropdown-item" href="goToGet.do">List Japanese Knives by ID</a> 
+			<a class="dropdown-item" href="goToCreate.do">Create Your Own Custom Japanese Knife</a>
+			<!-- <a class="dropdown-item" href="goToDelete.do">Delete Any Japanese Knife In Our Collection</a> -->
+			<!-- <a class="dropdown-item" href="goToUpdate.do">Modify A Japanese Knife</a> -->
+		<!-- 	<a class="dropdown-item" href="exit.do">Exit</a> -->
 		</div>
 	</div>
 </div>	

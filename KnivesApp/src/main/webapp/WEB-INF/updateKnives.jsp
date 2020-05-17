@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>UPDATE YOUR KNIVES</h1>
+	<h1>UPDATE YOUR KNIFE</h1>
 
 	<form action="">
 		<div class="form-group">

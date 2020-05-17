@@ -17,40 +17,47 @@ import com.skilldistillery.japanese_knives.entities.Knives;
 public class KnivesController {
 	@Autowired
 	private KnivesDAO dao;
-
-	@RequestMapping(path = "getKnives.do")
-	public String findKnives(@RequestParam Integer kid, Model model) {
-		Knives k = dao.findById(kid);
-		model.addAttribute("knives", k);
-		return "knivesDetail.";
-	}
-
 	@RequestMapping(path = { "/", "home.do" })
 	private String home(Model model) {
 		return "index";
 	}
+
+	@RequestMapping(path = "goIdKnives.do", method = RequestMethod.GET)
+	public String findKnives(@RequestParam Integer kid, Model model) {
+		Knives k = dao.findById(kid);
+		model.addAttribute("knives", k);
+		return "idKnife";
+	}
+	
+	@RequestMapping(path = "goToGet.do", method = RequestMethod.GET)
+	public ModelAndView findKnives() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("idKnife");
+		return mv;
+	}
+
+
 
 	@RequestMapping(path = "knivesByKeyword.do", params = "keyword")
 	public ModelAndView findKnives(String keyword) {
 		ModelAndView mv = new ModelAndView();
 		List<Knives> results = dao.knivesByKeyword(keyword);
 		mv.addObject("knives", results);
-		mv.setViewName("keywordResults");
+		mv.setViewName("keywordKnives");
 		return mv;
 	}
 	
 	@RequestMapping(path="goToKeyword.do", method = RequestMethod.GET)
 	public ModelAndView searchKnives() {
 		ModelAndView mv = new ModelAndView();
+//		this send to results page
 		mv.setViewName("keywordKnives");
 		return mv;
 	}
 
-	@RequestMapping(path = "updateKnives.do", params = "kid", method = RequestMethod.GET)
-	public ModelAndView updateKnives(int kid) {
+	@RequestMapping(path = "goToUpdate.do", method = RequestMethod.GET)
+	public ModelAndView updateKnives() {
 		ModelAndView mv = new ModelAndView();
-		Knives knivesUpdate = dao.updateKnives(kid);
-		mv.addObject("knives", knivesUpdate);
 		mv.setViewName("updateKnives");
 		return mv;
 	}
@@ -66,7 +73,7 @@ public class KnivesController {
 	}
 
 //	to form?
-	@RequestMapping(path = "createKnives.do")
+	@RequestMapping(path = "goToCreate.do")
 	public String createKnives() {
 		return "createKnives";
 	}
@@ -80,7 +87,7 @@ public class KnivesController {
 		return mv;
 	}
 
-	@RequestMapping(path = "deleteKnives.do", params = "kid", method = RequestMethod.GET)
+	@RequestMapping(path = "goToDelete.do", params = "kid", method = RequestMethod.GET)
 	public ModelAndView takeToDeleteForm(int kid) {
 		ModelAndView mv = new ModelAndView();
 		Knives toDelete = dao.findById(kid);
