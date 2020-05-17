@@ -46,7 +46,22 @@ class KnivesTest {
 	@Test
 	void test() {
 		assertNotNull(knives);
-		assertEquals("Anryu Kurouchi", knives.getName());
+		assertEquals("Gyuto", knives.getName());
+		assertEquals("Minamoto Hamon", knives.getMaker());
+		assertEquals("", knives.getConstruction());
+		assertEquals("19C27", knives.getSteel());
+		assertEquals("", knives.getCladding());
+		assertEquals("pakka wood", knives.getHandle());
+		assertEquals("", knives.getEdge());
+		assertEquals("5 oz", knives.getWeight());
+		assertEquals("184 mm", knives.getBladeLength());
+		assertEquals("308mm", knives.getTotalLength());
+		assertEquals("1.7 mm", knives.getSpineThickness());
+		assertEquals("43.49", knives.getBladeHeight());
+		assertEquals(
+				"Minamoto 19C27 Hamon Gyuto 185mm. This is an awesome little gyuto. It is small enough to do detail work, but it has the heft needed for larger jobs. The steel used, 19C27 is well known for its excellent edge retention and ease of sharpening. The pakka wood handle and the hamon finish give these knives great aesthetics",
+				knives.getDescription());
+		assertEquals("minamoto-hamon-gyuto-185mm-20.jpeg", knives.getImgLink());
 	}
 
 }

@@ -24,8 +24,8 @@
 			id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
 			aria-expanded="false">CHOICES</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="#">List All Japanese Knives</a> 
-			<a class="dropdown-item" href="#">List Japanese Knives by ID</a> 
+			<a class="dropdown-item" href="goToKeyword.do">Japanese KnivesBy Keyword</a> 
+			<a class="dropdown-item" href="getKnives.do">List Japanese Knives by ID</a> 
 			<a class="dropdown-item" href="#">Create Your Own Custom Japanese Knife</a>
 			<a class="dropdown-item" href="#">Delete Any Japanese Knife In Our Collection</a>
 			<a class="dropdown-item" href="#">Modify A Japanese Knife</a>

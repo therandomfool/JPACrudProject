@@ -10,7 +10,7 @@
 	<h1>CREATE CUSTOM KNIVES</h1>
 
 
-	<form>
+	<form action = "">
 		<div class="form-group">
 			<label for="">KNIFE STYLE / TYPE</label> <select class="form-control"
 				id="">
@@ -113,5 +113,6 @@
 				<option>Single bevel R</option>
 			</select>
 		</div>
+		</form>
 </body>
 </html>

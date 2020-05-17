@@ -22,12 +22,12 @@ public class KnivesController {
 	public String findKnives(@RequestParam Integer kid, Model model) {
 		Knives k = dao.findById(kid);
 		model.addAttribute("knives", k);
-		return "knivesDetail.jsp";
+		return "knivesDetail.";
 	}
 
 	@RequestMapping(path = { "/", "home.do" })
 	private String home(Model model) {
-		return "index.jsp";
+		return "index";
 	}
 
 	@RequestMapping(path = "knivesByKeyword.do", params = "keyword")
@@ -36,6 +36,13 @@ public class KnivesController {
 		List<Knives> results = dao.knivesByKeyword(keyword);
 		mv.addObject("knives", results);
 		mv.setViewName("keywordResults");
+		return mv;
+	}
+	
+	@RequestMapping(path="goToKeyword.do", method = RequestMethod.GET)
+	public ModelAndView searchKnives() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("keywordKnives");
 		return mv;
 	}
 
