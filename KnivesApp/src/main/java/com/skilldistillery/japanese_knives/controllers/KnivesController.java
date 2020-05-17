@@ -1,5 +1,7 @@
 package com.skilldistillery.japanese_knives.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,5 +27,20 @@ public class KnivesController {
 	private String home(Model model) {
 		return "index.jsp";		
 	}
+	
+	@RequestMapping(path="getKnives.do")
+	public String showKnives(@RequestParam Integer id, Model model) {
+		Knives knives = null;
+		if (id == null) {
+			List<Knives> teams = dao.findAll();
+			model.addAttribute("findAll", teams);
+			return "WEB-INF/home.jsp";
+		}
+		
+		knives = dao.findKnives(id);
+		model.addAttribute("team", team);
+		
+		
+		return "WEB-INF/show.jsp";
 
 }

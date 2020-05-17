@@ -11,10 +11,11 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="resources/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
-
+<link rel="icon" href="/resources/KNIFEimg/Katana-icon.jpg" />
 </head>
-<body class = "bg-info text-center title">
-	<h1  class="bg-danger mt-5 p-5">Japanese Knives</h1>
+<body class = "bg-info text-center title " id="backGHomePage">
+	<h1  class="bg-danger mt-5 p-2">武蔵の包丁屋</h1>
+	<h2 class="bg-danger mt-5 p-2">Musashi no hōchō-ya</h2>
 	
 	
 <div class = "container-fluid">

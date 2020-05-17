@@ -11,9 +11,9 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="resources/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
-<link rel="icon" href="./img/tower-icon.jpeg" />
+<link rel="icon" href="/resources/KNIFEimg/Katana-icon.jpg" />
 </head>
-<body>
+<body class = "backG">
 
 
 	<div class="container-fluid mt-5 title">
@@ -35,7 +35,7 @@
 			<p>description: ${knives.description}</p>
 			<p>imgLink: ${knives.imgLink}</p> --%>
 
-			<img class="border border-danger rounded-circle" src="resources/KNIFEimg/${knives.imgLink}" class="img-fluid"
+			<img class="border border-danger rounded" src="resources/KNIFEimg/${knives.imgLink}" class="img-fluid"
 				alt="Responsive image">
 
 			<!-- <audio controls autoplay>
