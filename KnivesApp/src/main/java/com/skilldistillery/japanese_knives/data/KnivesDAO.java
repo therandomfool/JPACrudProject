@@ -9,13 +9,13 @@ public interface KnivesDAO {
 	
 	public Knives findById(int id);
 	
-	public  Knives update (Knives knives, Integer id);
+	public  Knives updateKnives(Knives knives, Integer id);
 
-	public List<Knives> findAll();
+	public List<Knives> findKnives(Integer kid);
 	
-	public Knives create(Knives  knives);
+	public Knives createKnives(Knives  knives);
 	
-	public boolean delete(Integer id);
+	public boolean deleteKnives(Integer id);
 	
-
+	public List<Knives> knivesByKeyword(String keyWord);
 }

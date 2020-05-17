@@ -22,32 +22,35 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 		return em.find(Knives.class, id);
 	}
 
-	public Knives create(Knives knives) {
-		em.persist(knives);
-		em.flush();
-		return knives;
+	@Override
+	public Knives updateKnives(Knives knives, Integer id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public boolean delete(Integer id) {
-		em.remove(em.find(Knives.class, id));
-		Knives knives = em.find(Knives.class, id);
-		if (knives != null) {
-			return false;
-		}
-		return true;
-
+	@Override
+	public List<Knives> findKnives(Integer kid) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public List<Knives> findAll() {
-		String sql = "SELECT knives FROM Knives knives";
-		List<Knives> knives = em.createQuery(sql, Knives.class).getResultList();
-		return knives;
+	@Override
+	public Knives createKnives(Knives knives) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public Knives update(Knives knives, Integer id) {
-		Knives uKnives = em.find(Knives.class, id);
-		uKnives.setName(knives.getName());
-		return uKnives;
+	@Override
+	public boolean deleteKnives(Integer id) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
+	@Override
+	public List<Knives> knivesByKeyword(String keyWord) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }
