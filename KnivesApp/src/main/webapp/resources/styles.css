@@ -1,21 +1,12 @@
 @charset "UTF-8";
 
-/* .board {
-	font-size:xx-large;
-	background-color: blue;
-	text-align: center;
-	color: navy;
-} */
-p {
-	font-family: fantasy;
-	font-size: large;
-	background-color: aqua;
-	text-align: center;
-	color: navy;
-	font-weight: 500;
-}
 
-body {
-	background-image: url("resources/KNIFEimg/background.jpg");
-/* 	background-size: contain; */
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.title { color: #000000; font: 17px 'Merienda One', cursive; font-weight: normal; }
+
+
+
+#maker {
+	font-size: 2.25em !important;
 }
