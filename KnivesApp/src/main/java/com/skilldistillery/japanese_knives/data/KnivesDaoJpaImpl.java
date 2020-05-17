@@ -21,9 +21,7 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 	public Knives findById(int id) {
 		return em.find(Knives.class, id);
 	}
-
-	@Override
-	public Knives updateKnives(Knives knives, Integer id) {
+	public Knives updateKnives(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -51,6 +49,14 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public Knives updateKnives(Knives knives, Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
 
 	
 }

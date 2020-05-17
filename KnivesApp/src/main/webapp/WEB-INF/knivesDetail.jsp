@@ -45,19 +45,19 @@
 			
 			<h1 class="border border-danger alert alert-dark">Knives: ${knives.name}</h1>
 			<ul class="border border-danger list-group list-group-horizontal-sm list-inline justify-content-center">
-				<li class="list-group-item ">edge: ${knives.edge}</li>
-				<li class="list-group-item ">weight: ${knives.weight}</li>
-				<li class="list-group-item ">bladeLength: ${knives.bladeLength}</li>
-				<li class="list-group-item ">totalLength: ${knives.totalLength}</li>
-				<li class="list-group-item ">bladeHeight: ${knives.bladeHeight}</li>
-				<li class="list-group-item ">spineThickness: ${knives.spineThickness}</li>
+				<li class="list-group-item ">Edge : ${knives.edge}</li>
+				<li class="list-group-item ">Weight : ${knives.weight}</li>
+				<li class="list-group-item ">BladeLength : ${knives.bladeLength}</li>
+				<li class="list-group-item ">TotalLength : ${knives.totalLength}</li>
+				<li class="list-group-item ">BladeHeight : ${knives.bladeHeight}</li>
+				<li class="list-group-item ">SpineThickness : ${knives.spineThickness}</li>
 			</ul>
 			<ul class = "border border-danger list-inline justify-content-center">
-				<li class="list-group-item " id = "maker">maker: ${knives.maker}</li>
-				<li class="list-group-item ">construction: ${knives.construction}</li>
-				<li class="list-group-item ">steel: ${knives.steel}</li>
-				<li class="list-group-item ">cladding: ${knives.cladding}</li>
-				<li class="list-group-item ">description: ${knives.description}</li>
+				<li class="list-group-item " id = "maker">Maker : ${knives.maker}</li>
+				<li class="list-group-item ">Construction : ${knives.construction}</li>
+				<li class="list-group-item ">Steel : ${knives.steel}</li>
+				<li class="list-group-item ">Cladding : ${knives.cladding}</li>
+				<li class="list-group-item ">Description : ${knives.description}</li>
 				
 			</ul>
 

@@ -25,13 +25,77 @@ public class KnivesController {
 		return "knivesDetail.jsp";
 	}
 
-	@RequestMapping(path = {"/", "home.do"})
+	@RequestMapping(path = { "/", "home.do" })
 	private String home(Model model) {
 		return "index.jsp";
 	}
 
-	
+	@RequestMapping(path = "knivesByKeyword.do", params = "keyword")
+	public ModelAndView findKnives(String keyword) {
+		ModelAndView mv = new ModelAndView();
+		List<Knives> results = dao.knivesByKeyword(keyword);
+		mv.addObject("knives", results);
+		mv.setViewName("keywordResults");
+		return mv;
+	}
 
-	
+	@RequestMapping(path = "updateKnives.do", params = "kid", method = RequestMethod.GET)
+	public ModelAndView updateKnives(int kid) {
+		ModelAndView mv = new ModelAndView();
+		Knives knivesUpdate = dao.updateKnives(kid);
+		mv.addObject("knives", knivesUpdate);
+		mv.setViewName("updateKnives");
+		return mv;
+	}
+
+//	fix routing
+	@RequestMapping(path = "updateKnives.do", params = "kid")
+	public ModelAndView updateKnives(int kid, Knives knives) {
+		ModelAndView mv = new ModelAndView();
+		Knives knivesUpdate = dao.updateKnives(kid);
+		mv.addObject("knives", knivesUpdate);
+		mv.setViewName("updateKnives");
+		return mv;
+	}
+
+//	to form?
+	@RequestMapping(path = "createKnives.do")
+	public String createKnives() {
+		return "createKnives";
+	}
+
+	@RequestMapping(path = "createKnives.do", method = RequestMethod.POST)
+	public ModelAndView createKnives(Knives knives) {
+		ModelAndView mv = new ModelAndView();
+		Knives kn = dao.createKnives(knives);
+		mv.addObject("knives", kn);
+		mv.setViewName("createKnives");
+		return mv;
+	}
+
+	@RequestMapping(path = "deleteKnives.do", params = "kid", method = RequestMethod.GET)
+	public ModelAndView takeToDeleteForm(int kid) {
+		ModelAndView mv = new ModelAndView();
+		Knives toDelete = dao.findById(kid);
+		mv.addObject("knives", toDelete);
+		mv.setViewName("deleteKnives");
+		return mv;
+	}
+
+	@RequestMapping(path = "deleteKnives.do", method = RequestMethod.POST)
+	public ModelAndView deleteKnives(int kid) {
+		ModelAndView mv = new ModelAndView();
+		boolean result = dao.deleteKnives(kid);
+		if (result != true) {
+			String knifeError = "UNSUCCESSFULL DELETION.";
+			mv.addObject("knifeError", knifeError);
+		} else {
+			String knifeSuccess = "DELETION SUCCESSFULL";
+			mv.addObject("knifeSuccess", knifeSuccess);
+		}
+		mv.setViewName("deleteKnives");
+		return mv;
+	}
+
 
 }
