@@ -14,24 +14,6 @@
 	<h1>DELETE KNIVES</h1>
 
 
-	<c:choose>
-		<c:when test="${!empty knives }">
-			<h1>Correct Knife?</h1>
-			<br>
-			<p>Knife Type: ${knives.name}</p>
-			<p>ID: ${knives.id }</p>
-
-
-			<form action="delete.do" method=POST>
-				<input type="submit" value="Delete Knives"> 
-				<input type="hidden" value="${knives.id }" name="id">
-			</form>
-
-		</c:when>
-		<c:otherwise>
-			<p>No Japanese Knife Found</p>
-		</c:otherwise>
-	</c:choose>
 	
 	
 	
