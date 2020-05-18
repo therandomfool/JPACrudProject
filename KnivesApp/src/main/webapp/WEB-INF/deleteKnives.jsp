@@ -23,8 +23,8 @@
 
 
 			<form action="delete.do" method=POST>
-				<input type="submit" value="Delete Bar"> 
-				<input type="hidden" value="${bar.id }" name="id">
+				<input type="submit" value="Delete Knives"> 
+				<input type="hidden" value="${knives.id }" name="id">
 			</form>
 
 		</c:when>

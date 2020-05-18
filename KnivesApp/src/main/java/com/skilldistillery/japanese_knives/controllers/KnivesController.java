@@ -93,7 +93,7 @@ public class KnivesController {
 	}
 
 	@RequestMapping(path = "goToDelete.do", method = RequestMethod.GET)
-	public ModelAndView takeToDeleteForm(int id) {
+	public ModelAndView takeToDeleteForm(Integer id) {
 		ModelAndView mv = new ModelAndView();
 		Knives toDelete = dao.findById(id);
 		mv.addObject("knives", toDelete);
@@ -102,7 +102,7 @@ public class KnivesController {
 	}
 
 	@RequestMapping(path = "deleteKnives.do", method = RequestMethod.POST)
-	public ModelAndView deleteKnives(int id) {
+	public ModelAndView deleteKnives(Integer id) {
 		ModelAndView mv = new ModelAndView();
 		boolean result = dao.deleteKnives(id);
 		if (result != true) {

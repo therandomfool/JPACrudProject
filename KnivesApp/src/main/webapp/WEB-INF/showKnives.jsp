@@ -67,10 +67,10 @@
 
 							<form action="deleteKnives.do" method="POST">
 								<label for="name"></label> 
-								<input name="kid" value="TYPE: ${knives.name}" />
+								<input name="type" value="TYPE: ${knives.name}" />
 								<label for="maker" ></label>
 								<input name="maker" value="MAKER: ${knives.maker}"/>
-								<input type="hidden" name="kid" value="${knives.id}" /> <br>
+								<input type="hidden" name="id" value="${knives.id}" /> <br>
 								<input type="submit" type="button" id="deleteKnives"
 									value="Delete" class="btn btn-outline-primary" />
 							</form>
