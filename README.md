@@ -8,7 +8,7 @@
 
 
 ## LESSONS LEARNED
-- WASN'T ABLE TO ABLE TO COMPLETE C.R.U.D.  ALL CAN DO IS SHOW ALL AND MAP TO CORRECT PAGES W/O RESULTS
+- WASN'T ABLE TO ABLE TO COMPLETE C.R.U.D.  ALL CAN DO IS SHOW ALL AND MAP TO CORRECT PAGES W/O RESULTS.  STAYED UP TO 2 AM PST TRYING TO MAKE IT WORK.
 
 - java.lang.IllegalStateException: Optional int parameter 'id' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.  THIS ERROR MESSAGE IS THE BANE OF MY EXISTENCE
 
