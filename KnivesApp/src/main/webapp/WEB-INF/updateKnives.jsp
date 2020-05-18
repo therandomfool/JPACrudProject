@@ -13,6 +13,7 @@
 		<div class="form-group">
 			<label for="">UPDATE YOUR KNIVE HANDLE</label> <select class="form-control"
 				id="">
+				<option>Bar-wa</option>
 				<option>Pakka Wood</option>
 				<option>Rosewood Oval</option>
 				<option>Black Pakka Wood</option>
