@@ -29,9 +29,13 @@ public class KnivesController {
 		return "idKnife";
 	}
 	
+	
+	// KNIVES BY all  list of knives
 	@RequestMapping(path = "goToGet.do", method = RequestMethod.GET)
-	public ModelAndView findKnives() {
+	public ModelAndView findKnives(Integer id) {
+		List<Knives> knives = dao.findKnives(id);
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("knives", knives);
 		mv.setViewName("idKnife");
 		return mv;
 	}
@@ -88,7 +92,7 @@ public class KnivesController {
 	}
 
 	@RequestMapping(path = "goToDelete.do")
-	public ModelAndView takeToDeleteForm(Integer kid) {
+	public ModelAndView takeToDeleteForm(int kid) {
 		ModelAndView mv = new ModelAndView();
 		Knives toDelete = dao.findById(kid);
 		mv.addObject("knives", toDelete);

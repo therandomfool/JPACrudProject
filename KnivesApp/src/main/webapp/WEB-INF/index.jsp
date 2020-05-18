@@ -29,7 +29,7 @@
 			<a class="dropdown-item" href="goToCreate.do">Create Your Own Custom Japanese Knife</a>
 			<!-- <a class="dropdown-item" href="goToDelete.do">Delete Any Japanese Knife In Our Collection</a> -->
 			<!-- <a class="dropdown-item" href="goToUpdate.do">Modify A Japanese Knife</a> -->
-		<!-- 	<a class="dropdown-item" href="exit.do">Exit</a> -->
+			<!-- <a class="dropdown-item" href="exit.do">Exit</a> -->
 		</div>
 	</div>
 </div>	

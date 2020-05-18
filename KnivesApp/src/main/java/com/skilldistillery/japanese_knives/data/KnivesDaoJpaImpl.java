@@ -57,7 +57,7 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 	@Override
 	public List<Knives> knivesByKeyword(String keyWord) {
 		List<Knives> results = null;
-		String jpql = "";
+		String jpql = "SELECT k FROM Knives k WHERE k.maker = :maker";
 
 		results = em.createQuery(jpql, Knives.class).setParameter("key", keyWord).getResultList();
 		return results;
@@ -72,8 +72,9 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 
 	@Override
 	public List<Knives> findKnives(Integer kid) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return em.createQuery("SELECT k FROM Knives k WHERE k.kid = :id", Knives.class)
+				.setParameter("kid", kid).getResultList();
 	}
 
 }
