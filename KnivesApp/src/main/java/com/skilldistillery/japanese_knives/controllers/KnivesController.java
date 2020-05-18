@@ -17,30 +17,31 @@ import com.skilldistillery.japanese_knives.entities.Knives;
 public class KnivesController {
 	@Autowired
 	private KnivesDAO dao;
+
 	@RequestMapping(path = { "/", "home.do" })
 	private String home(Model model) {
 		return "index";
 	}
 
+// Basically here the integer is coming in as an integer but delete is read as a string
 	@RequestMapping(path = "goIdKnives.do", method = RequestMethod.GET)
-	public String findKnives(@RequestParam Integer kid, Model model) {
+	public String findKnives(@RequestParam(name = "kid") Integer kid, Model model) {
+
 		Knives k = dao.findById(kid);
 		model.addAttribute("knives", k);
-		return "idKnife";
+		return "showKnives";
+
 	}
-	
-	
-	// KNIVES BY all  list of knives
-	@RequestMapping(path = "goToGet.do", method = RequestMethod.GET)
-	public ModelAndView findKnives(Integer id) {
-		List<Knives> knives = dao.findKnives(id);
+
+	// KNIVES BY all list of knives
+	@RequestMapping(path = "goToShow.do", method = RequestMethod.GET)
+	public ModelAndView findKnives() {
+		List<Knives> knives = dao.findKnives();
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("knives", knives);
-		mv.setViewName("idKnife");
+		mv.setViewName("showKnives");
 		return mv;
 	}
-
-
 
 	@RequestMapping(path = "knivesByKeyword.do", params = "keyword")
 	public ModelAndView findKnives(String keyword) {
@@ -50,8 +51,8 @@ public class KnivesController {
 		mv.setViewName("keywordKnives");
 		return mv;
 	}
-	
-	@RequestMapping(path="goToKeyword.do", method = RequestMethod.GET)
+
+	@RequestMapping(path = "goToKeyword.do", method = RequestMethod.GET)
 	public ModelAndView searchKnives() {
 		ModelAndView mv = new ModelAndView();
 //		this send to results page
@@ -91,19 +92,19 @@ public class KnivesController {
 		return mv;
 	}
 
-	@RequestMapping(path = "goToDelete.do")
-	public ModelAndView takeToDeleteForm(int kid) {
+	@RequestMapping(path = "goToDelete.do", method = RequestMethod.GET)
+	public ModelAndView takeToDeleteForm(int id) {
 		ModelAndView mv = new ModelAndView();
-		Knives toDelete = dao.findById(kid);
+		Knives toDelete = dao.findById(id);
 		mv.addObject("knives", toDelete);
 		mv.setViewName("deleteKnives");
 		return mv;
 	}
 
 	@RequestMapping(path = "deleteKnives.do", method = RequestMethod.POST)
-	public ModelAndView deleteKnives(int kid) {
+	public ModelAndView deleteKnives(int id) {
 		ModelAndView mv = new ModelAndView();
-		boolean result = dao.deleteKnives(kid);
+		boolean result = dao.deleteKnives(id);
 		if (result != true) {
 			String knifeError = "UNSUCCESSFULL DELETION.";
 			mv.addObject("knifeError", knifeError);
@@ -114,6 +115,5 @@ public class KnivesController {
 		mv.setViewName("deleteKnives");
 		return mv;
 	}
-
 
 }

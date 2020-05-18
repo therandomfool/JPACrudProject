@@ -33,25 +33,27 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 		return knivesUpdate;
 	}
 
-
-
 	@Override
 	public Knives createKnives(Knives knives) {
 		em.persist(knives);
-		em.flush();	
+		em.flush();
 		em.close();
 		return knives;
-	
+
 	}
 
 	@Override
 	public boolean deleteKnives(Integer id) {
-		em.remove(em.find(Knives.class, id));
-		em.flush();
-		boolean knifePresent = em.contains(em.find(Knives.class, id));
-		System.out.println(knifePresent);
-		return !knifePresent;
-	
+		boolean delete= false;
+		Knives knives = em.find(Knives.class, id);
+		if (knives != null) {
+			em.remove(knives);
+			em.flush();
+		} 
+		delete = !em.contains(knives);
+//		System.out.println(knifePresent);
+		return delete;
+
 	}
 
 	@Override
@@ -61,7 +63,7 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 
 		results = em.createQuery(jpql, Knives.class).setParameter("key", keyWord).getResultList();
 		return results;
-		
+
 	}
 
 	@Override
@@ -71,10 +73,10 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 	}
 
 	@Override
-	public List<Knives> findKnives(Integer kid) {
-		
-		return em.createQuery("SELECT k FROM Knives k WHERE k.kid = :id", Knives.class)
-				.setParameter("kid", kid).getResultList();
+	public List<Knives> findKnives() {
+		List<Knives> knives;
+		knives = em.createQuery("SELECT k FROM Knives k", Knives.class).getResultList();
+		return knives;
 	}
 
 }

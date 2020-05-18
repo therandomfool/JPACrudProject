@@ -25,7 +25,7 @@
 			aria-expanded="false">CHOICES</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 			<a class="dropdown-item" href="goToKeyword.do">Japanese KnivesBy Keyword</a> 
-			<a class="dropdown-item" href="goToGet.do">List Japanese Knives by ID</a> 
+			<a class="dropdown-item" href="goToShow.do">List Japanese Knives by ID</a> 
 			<a class="dropdown-item" href="goToCreate.do">Create Your Own Custom Japanese Knife</a>
 			<!-- <a class="dropdown-item" href="goToDelete.do">Delete Any Japanese Knife In Our Collection</a> -->
 			<!-- <a class="dropdown-item" href="goToUpdate.do">Modify A Japanese Knife</a> -->
