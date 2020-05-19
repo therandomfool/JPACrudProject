@@ -10,15 +10,17 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	opacity: .7;
+	opacity: .82;
 }
 
 #showBG {
-	background-image: url(KNIFEimg/background2.jpg) !important;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
+	/* background-image: url(KNIFEimg/background2.jpg) !important; */
+	/* background-position: center center; */
+	/* background-repeat: no-repeat; */
+	/* background-attachment: scroll;
+	background-size: cover; */
+	/* opacity: .89; */
+	background:#D4FBFC;
 }
 
 #kwbg {

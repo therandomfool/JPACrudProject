@@ -21,8 +21,8 @@
 	${Knives.id}
 	<form action="updateKnives.do" method = "POST">
 		<div class="form-group">
-			<label class="ml-5 text-center border border-danger alert alert-success"  for="handle">CHOOSE YOUR NEW KNIFE HANDLE</label> <select
-				name="handle" class="form-control" id="handle">
+			<label class="ml-5 text-center border border-danger alert alert-success"  for="handle">CHOOSE YOUR NEW KNIFE HANDLE</label> 
+			<select name="handle" class="form-control" id="handle">
 				<option>Pakka Wood</option>
 				<option>Rosewood Oval</option>
 				<option>Black Pakka Wood</option>
