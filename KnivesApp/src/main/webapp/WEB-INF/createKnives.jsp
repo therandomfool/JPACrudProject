@@ -5,13 +5,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="resources/styles.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap"
+	rel="stylesheet">
+<link rel="icon" href="/resources/KNIFEimg/Katana-icon.jpg" />
 </head>
 <body>
 	<h1>CREATE CUSTOM KNIVES</h1>
 
 	<div class= "container-fluid">
 		<form action="createKnives.do" method = "POST">
-			<div class="form-group">
+			<div class="form-group bg-danger text-center mt-5">
 				<label for="">KNIFE STYLE / TYPE</label> 
 				<select class="form-control" name="type" id="type">
 					<option>Gyuto</option>
@@ -25,7 +34,7 @@
 					<option>Santoku</option>
 				</select>
 			</div>
-			<div class="form-group">
+			<div class="form-group bg-danger text-center mt-5">
 				<label for="">MAKER / FAMILY</label> 
 				<select class="form-control" name="maker" id="maker">
 					<option>Minamoto Hamon</option>
@@ -45,7 +54,7 @@
 					<option>Yasunori</option>
 				</select>
 			</div>
-			<div class="form-group">
+			<div class="form-group bg-danger text-center mt-5">
 				<label for="">CONSTRUCTION</label>
 				<select class="form-control" name="construction" id="construction">
 					<option>San Mai, Hammer Forged</option>
@@ -53,7 +62,7 @@
 					<option>Stamped Mono Steel</option>
 				</select>
 			</div>
-			<div class="form-group">
+			<div class="form-group bg-danger text-center mt-5">
 				<label for="">STEEL</label> 
 			
 				<select class="form-control" name="steel" id="steel">
@@ -75,7 +84,7 @@
 
 				</select>
 			</div>
-			<div class="form-group">
+			<div class="form-group bg-danger text-center mt-5">
 				<label for="">CLADDING</label> 
 				<select class="form-control" name="cladding" id="cladding">
 					<option>Stainless Steel</option>
@@ -90,7 +99,7 @@
 				</select>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group bg-danger text-center mt-5">
 				<label for="">HANDLE</label> 
 				<select class="form-control" name="handle" id="handle">
 				<option>Pakka Wood</option>
@@ -112,7 +121,7 @@
 				<option>Magnolia Wood Oval / Red Dyed Pakka Wood</option>
 				</select>
 			</div>
-			<div class="form-group">
+			<div class="form-group bg-danger text-center mt-5">
 				<label for="">EDGE</label> <select class="form-control" name="edge" id="edge">
 					<option>Even</option>
 					<option>Single bevel L</option>
@@ -127,5 +136,20 @@
 			value="CONTINUE" />
 		</form>
 	</div>
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+	
 </body>
 </html>

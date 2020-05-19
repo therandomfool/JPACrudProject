@@ -26,9 +26,9 @@
 	<form action="">
 		<div class="form-group bg-danger text-center mt-5">
 			<label for="">Japanese Knives Keyword Search</label> <input
-				type="email" class="form-control" id="" aria-describedby="emailHelp"
-				placeholder="Kiritsuke"> <small id="emailHelp"
-				class="form-text text-white text-center">Enter your keyword here</small>
+				type="text" class="form-control" id="" name="keyword"
+				placeholder="Kiritsuke"> 
+				<small id="emailHelp" class="form-text text-white text-center">Enter your keyword here</small>
 		</div>
 	</form>
 
