@@ -8,7 +8,7 @@ public interface KnivesDAO {
 
 	public Knives findById(int id);
 
-	public Knives updateKnives(Integer kid);
+//	public Knives updateKnives(Integer id);
 
 	public List<Knives> findKnives();
 
@@ -18,6 +18,6 @@ public interface KnivesDAO {
 
 	public List<Knives> knivesByKeyword(String keyWord);
 
-	Knives updateKnives(Knives knives, Integer id);
+	public Knives updateKnives(Knives knives, Integer id);
 
 }

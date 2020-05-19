@@ -10,10 +10,10 @@
 	<h1>CREATE CUSTOM KNIVES</h1>
 
 	<div class= "container-fluid">
-		<form action="">
+		<form action="createKnives.do" method = "POST">
 			<div class="form-group">
-				<label for="">KNIFE STYLE / TYPE</label> <select
-					class="form-control" id="">
+				<label for="">KNIFE STYLE / TYPE</label> 
+				<select class="form-control" name="type" id="type">
 					<option>Gyuto</option>
 					<option>Kiritsuke</option>
 					<option>Bunka</option>
@@ -26,8 +26,8 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="">MAKER / FAMILY</label> <select class="form-control"
-					id="">
+				<label for="">MAKER / FAMILY</label> 
+				<select class="form-control" name="maker" id="maker">
 					<option>Minamoto Hamon</option>
 					<option>Katsushige Anryu</option>
 					<option>Yasunori-san</option>
@@ -46,15 +46,17 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="">CONSTRUCTION</label> <select class="form-control"
-					id="">
+				<label for="">CONSTRUCTION</label>
+				<select class="form-control" name="construction" id="construction">
 					<option>San Mai, Hammer Forged</option>
 					<option>Laser Cut, Mono Steel</option>
 					<option>Stamped Mono Steel</option>
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="">STEEL</label> <select class="form-control" id="">
+				<label for="">STEEL</label> 
+			
+				<select class="form-control" name="steel" id="steel">
 					<option>19C27</option>
 					<option>Blue #2</option>
 					<option>VG-10</option>
@@ -74,7 +76,8 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="">CLADDING</label> <select class="form-control" id="">
+				<label for="">CLADDING</label> 
+				<select class="form-control" name="cladding" id="cladding">
 					<option>Stainless Steel</option>
 					<option>Hammered Damascus</option>
 					<option>Nashiji Finish</option>
@@ -88,32 +91,40 @@
 			</div>
 
 			<div class="form-group">
-				<label for="">HANDLE</label> <select class="form-control" id="">
-					<option>Pakka Wood</option>
-					<option>Rosewood Oval</option>
-					<option>Black Pakka Wood</option>
-					<option>Walnut Octagonal</option>
-					<option>Rosewood Octagonal</option>
-					<option>Magnolia Octagonal / Buffalo Horn</option>
-					<option>Ergonomic Style Wooden Handle</option>
-					<option>Custom Amboynia Burl Octagonal</option>
-					<option>Yo Rosewood</option>
-					<option>Rosewood Octagonal / Black Pakkawood</option>
-					<option>Ebony / Rosewood oval wa handle</option>
-					<option>Octagonal walnut / black pakka wood</option>
-					<option>Ho Wood Octagonal / Buffalo Horn</option>
-					<option>4,000 Year Old Bog Oak Octagonal</option>
-					<option>Magnolia Wood Octagonal / Buffalo Horn</option>
-					<option>Magnolia Wood Oval / Red Dyed Pakka Wood</option>
+				<label for="">HANDLE</label> 
+				<select class="form-control" name="handle" id="handle">
+				<option>Pakka Wood</option>
+				<option>Rosewood Oval</option>
+				<option>Black Pakka Wood</option>
+				<option>Walnut Octagonal</option>
+				<option>Rosewood Octagonal</option>
+				<option>Bar-wa</option>
+				<option>Magnolia Octagonal / Buffalo Horn</option>
+				<option>Ergonomic Style Wooden Handle</option>
+				<option>Custom Amboynia Burl Octagonal</option>
+				<option>Yo Rosewood</option>
+				<option>Rosewood Octagonal / Black Pakkawood</option>
+				<option>Ebony / Rosewood oval wa handle</option>
+				<option>Octagonal walnut / black pakka wood</option>
+				<option>Ho Wood Octagonal / Buffalo Horn</option>
+				<option>4,000 Year Old Bog Oak Octagonal</option>
+				<option>Magnolia Wood Octagonal / Buffalo Horn</option>
+				<option>Magnolia Wood Oval / Red Dyed Pakka Wood</option>
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="">EDGE</label> <select class="form-control" id="">
+				<label for="">EDGE</label> <select class="form-control" name="edge" id="edge">
 					<option>Even</option>
 					<option>Single bevel L</option>
 					<option>Single bevel R</option>
 				</select>
 			</div>
+			
+		<input name = "name" type="hidden" value="${Knives.name}" /> 
+		<input name = "maker" type="hidden" value="${Knives.maker}" /> 
+		
+		<input name = "id" type="hidden" value="${Knives.id}" /> <input type="submit"
+			value="CONTINUE" />
 		</form>
 	</div>
 </body>

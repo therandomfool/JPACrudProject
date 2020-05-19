@@ -61,19 +61,22 @@ public class KnivesController {
 	}
 
 	@RequestMapping(path = "goToUpdate.do", method = RequestMethod.GET)
-	public ModelAndView updateKnives() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("updateKnives");
-		return mv;
+	public String updateKnives(@RequestParam("id") int id, Model model) {
+		System.out.println(id);
+		Knives knives = dao.findById(id);
+		model.addAttribute("Knives", knives);
+		
+		return "updateKnives";
+
 	}
 
 //	fix routing
-	@RequestMapping(path = "updateKnives.do", params = "kid")
-	public ModelAndView updateKnives(int kid, Knives knives) {
+	@RequestMapping(path = "updateKnives.do", method = RequestMethod.POST)
+	public ModelAndView updateKnives(@RequestParam("id") int id, Knives knives) {
 		ModelAndView mv = new ModelAndView();
-		Knives knivesUpdate = dao.updateKnives(kid);
+		Knives knivesUpdate = dao.updateKnives(knives, id);
 		mv.addObject("knives", knivesUpdate);
-		mv.setViewName("updateKnives");
+		mv.setViewName("index");
 		return mv;
 	}
 

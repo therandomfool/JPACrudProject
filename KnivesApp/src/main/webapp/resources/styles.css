@@ -4,8 +4,41 @@
 	url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap')
 	;
 
-body {
-	background-image: url(KNIFEimg/background.jpg);
+#backGHomePage {
+	background-image: url(KNIFEimg/background1.jpg) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	opacity: .7;
+}
+
+#showBG {
+	background-image: url(KNIFEimg/background2.jpg) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#kwbg {
+	background-image: url(KNIFEimg/background3.jpg) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	
+}
+
+#udBG {
+	background-image: url(KNIFEimg/background4.jpeg) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	opacity: .82;
+	
+	
 }
 
 
@@ -18,4 +51,29 @@ body {
 
 #maker {
 	font-size: 2.25em !important;
+}
+
+h1 {
+	
+	font: 17px 'Merienda One', cursive;
+	font-weight: normal;
+	font-size: 2.75em;
+	font-stretch: wider;	
+}
+
+label {
+	
+	font: 17px 'Merienda One', cursive;
+	font-weight: bolder;
+	font-size: 1.55em;
+	
+	
+	
+	/* font-stretch: wider; */	
+}
+
+h4{
+	font: 17px 'Merienda One', cursive;
+	font-weight: bolder;
+	font-size: 1.55em;
 }

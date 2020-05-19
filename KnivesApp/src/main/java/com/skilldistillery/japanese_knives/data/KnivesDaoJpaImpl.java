@@ -25,6 +25,9 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 	public Knives updateKnives(Knives knives, Integer id) {
 		Knives knivesUpdate = em.find(Knives.class, id);
 
+		knivesUpdate.setId(knives.getId());
+		knivesUpdate.setName(knives.getName());
+		knivesUpdate.setMaker(knives.getMaker());
 		knivesUpdate.setHandle(knives.getHandle());
 		knivesUpdate.setEdge(knives.getEdge());
 
@@ -66,11 +69,11 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 
 	}
 
-	@Override
-	public Knives updateKnives(Integer kid) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public Knives updateKnives(Integer id) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 	@Override
 	public List<Knives> findKnives() {

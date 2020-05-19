@@ -16,8 +16,11 @@
 	rel="stylesheet">
 <link rel="icon" href="/resources/KNIFEimg/Katana-icon.jpg" />
 </head>
-<body>
-	<h1>List of Knives</h1>
+<body id="showBG">
+
+
+
+	<h1 class="text-center bg-danger" >List of Knives</h1>
 
 
 	<c:choose>
@@ -58,6 +61,8 @@
 									${knives.maker}</li>
 								<li class="list-group-item ">Construction :
 									${knives.construction}</li>
+								<li class="list-group-item ">Handle :
+									${knives.handle}</li>
 								<li class="list-group-item ">Steel : ${knives.steel}</li>
 								<li class="list-group-item ">Cladding : ${knives.cladding}</li>
 								<li class="list-group-item ">Description :
@@ -67,12 +72,17 @@
 
 							<form action="deleteKnives.do" method="POST">
 								<label for="name"></label> 
-								<input name="type" value="TYPE: ${knives.name}" />
+								<input class="border border-danger" name="type" value="TYPE: ${knives.name}" />
 								<label for="maker" ></label>
-								<input name="maker" value="MAKER: ${knives.maker}"/>
+								<input class="border border-danger" name="maker" value="MAKER: ${knives.maker}"/>
 								<input type="hidden" name="id" value="${knives.id}" /> <br>
 								<input type="submit" type="button" id="deleteKnives"
-									value="Delete" class="btn btn-outline-primary" />
+									value="DELETE" class="btn text-dark btn-primary mt-1 btn-outline-danger" />
+							</form>
+							<form action="goToUpdate.do"  method="GET">
+								<input type="hidden" name="id" value="${knives.id}" /> 
+								<input type="submit" type="button" id="updateKnives"
+									value="MODIFY" class="btn text-dark btn-primary mt-1 btn-outline-danger" />
 							</form>
 						</div>
 					</div>
