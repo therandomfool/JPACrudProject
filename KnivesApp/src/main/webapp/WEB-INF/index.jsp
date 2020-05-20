@@ -25,14 +25,12 @@
 			<button class="btn btn-secondary dropdown-toggle mt-5" type="button"
 				id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
 				aria-expanded="false">KNIFE CHOICES</button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="goToKeyword.do">Japanese KnivesBy
-					Keyword</a> <a class="dropdown-item" href="goToShow.do">List All
-					Japanese Knives</a> <a class="dropdown-item" href="goToCreate.do">Create
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+					<a class="dropdown-item" href="goToShow.do">List All
+					Japanese Knives</a> 
+					<a class="dropdown-item" href="goToCreate.do">Create
 					Your Own Custom Japanese Knife</a>
-				<!-- <a class="dropdown-item" href="goToDelete.do">Delete Any Japanese Knife In Our Collection</a> -->
-				<!-- <a class="dropdown-item" href="goToUpdate.do">Modify A Japanese Knife</a> -->
-				<!-- <a class="dropdown-item" href="exit.do">Exit</a> -->
+	
 			</div>
 		</div>
 	</div>
