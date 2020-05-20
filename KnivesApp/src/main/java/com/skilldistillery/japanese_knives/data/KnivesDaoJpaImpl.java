@@ -25,14 +25,14 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 	public Knives updateKnives(Knives knives, Integer id) {
 		Knives knivesUpdate = em.find(Knives.class, id);
 
-		knivesUpdate.setId(knives.getId());
+//		
 		knivesUpdate.setName(knives.getName());
 		knivesUpdate.setMaker(knives.getMaker());
 		knivesUpdate.setHandle(knives.getHandle());
 		knivesUpdate.setEdge(knives.getEdge());
 
 		em.flush();
-		em.close();
+		
 		return knivesUpdate;
 	}
 
@@ -40,7 +40,7 @@ public class KnivesDaoJpaImpl implements KnivesDAO {
 	public Knives createKnives(Knives knives) {
 		em.persist(knives);
 		em.flush();
-		em.close();
+	
 		return knives;
 
 	}

@@ -15,14 +15,14 @@
 	rel="stylesheet">
 <link rel="icon" href="/resources/KNIFEimg/Katana-icon.jpg" />
 </head>
-<body>
+<body id="kwbg">
 	<h1>CREATE CUSTOM KNIVES</h1>
 
 	<div class= "container-fluid">
 		<form action="createKnives.do" method = "POST">
-			<div class="form-group bg-danger text-center mt-5">
-				<label for="">KNIFE STYLE / TYPE</label> 
-				<select class="form-control" name="type" id="type">
+			<div class="form-group bg-danger text-center mt-5 rounded-circle">
+				<label for="Knife Style">KNIFE STYLE / TYPE</label> 
+				<select class="form-control" name="name" id="name">
 					<option>Gyuto</option>
 					<option>Kiritsuke</option>
 					<option>Bunka</option>
@@ -35,7 +35,7 @@
 				</select>
 			</div>
 			<div class="form-group bg-danger text-center mt-5">
-				<label for="">MAKER / FAMILY</label> 
+				<label for="MAKER / FAMILY">MAKER / FAMILY</label> 
 				<select class="form-control" name="maker" id="maker">
 					<option>Minamoto Hamon</option>
 					<option>Katsushige Anryu</option>
@@ -55,7 +55,7 @@
 				</select>
 			</div>
 			<div class="form-group bg-danger text-center mt-5">
-				<label for="">CONSTRUCTION</label>
+				<label for="CONSTRUCTION">CONSTRUCTION</label>
 				<select class="form-control" name="construction" id="construction">
 					<option>San Mai, Hammer Forged</option>
 					<option>Laser Cut, Mono Steel</option>
@@ -63,7 +63,7 @@
 				</select>
 			</div>
 			<div class="form-group bg-danger text-center mt-5">
-				<label for="">STEEL</label> 
+				<label for="STEEL">STEEL</label> 
 			
 				<select class="form-control" name="steel" id="steel">
 					<option>19C27</option>
@@ -85,7 +85,7 @@
 				</select>
 			</div>
 			<div class="form-group bg-danger text-center mt-5">
-				<label for="">CLADDING</label> 
+				<label for="CLADDING">CLADDING</label> 
 				<select class="form-control" name="cladding" id="cladding">
 					<option>Stainless Steel</option>
 					<option>Hammered Damascus</option>
@@ -100,14 +100,14 @@
 			</div>
 
 			<div class="form-group bg-danger text-center mt-5">
-				<label for="">HANDLE</label> 
+				<label for="HANDLE">HANDLE</label> 
 				<select class="form-control" name="handle" id="handle">
 				<option>Pakka Wood</option>
 				<option>Rosewood Oval</option>
 				<option>Black Pakka Wood</option>
 				<option>Walnut Octagonal</option>
 				<option>Rosewood Octagonal</option>
-				<option>Bar-wa</option>
+				<option>Bar</option>
 				<option>Magnolia Octagonal / Buffalo Horn</option>
 				<option>Ergonomic Style Wooden Handle</option>
 				<option>Custom Amboynia Burl Octagonal</option>
@@ -122,18 +122,16 @@
 				</select>
 			</div>
 			<div class="form-group bg-danger text-center mt-5">
-				<label for="">EDGE</label> <select class="form-control" name="edge" id="edge">
+				<label for="EDGE">EDGE</label> <select class="form-control" name="edge" id="edge">
 					<option>Even</option>
 					<option>Single bevel L</option>
 					<option>Single bevel R</option>
 				</select>
 			</div>
 			
-		<input name = "name" type="hidden" value="${Knives.name}" /> 
-		<input name = "maker" type="hidden" value="${Knives.maker}" /> 
 		
-		<input name = "id" type="hidden" value="${Knives.id}" /> <input type="submit"
-			value="CONTINUE" />
+		<input type="submit" value="CONTINUE" />
+			
 		</form>
 	</div>
 	

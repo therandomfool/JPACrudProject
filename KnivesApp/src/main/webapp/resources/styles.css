@@ -20,25 +20,25 @@ body {
 	/* background-attachment: scroll;
 	background-size: cover; */
 	/* opacity: .89; */
-	background:#D4FBFC;
+	/*  background:#D4FBFC !important;  */
 }
 
 #kwbg {
-	background-image: url(KNIFEimg/background3.jpg) !important;
+	/* background-image: url(KNIFEimg/background3.jpg) !important;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	
+	 */
 }
 
 #udBG {
-	background-image: url(KNIFEimg/background4.jpeg) !important;
+	/* background-image: url(KNIFEimg/background4.jpeg) !important;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	opacity: .82;
+	opacity: .82; */
 	
 	
 }
@@ -68,10 +68,6 @@ label {
 	font: 17px 'Merienda One', cursive;
 	font-weight: bolder;
 	font-size: 1.55em;
-	
-	
-	
-	/* font-stretch: wider; */	
 }
 
 h4{

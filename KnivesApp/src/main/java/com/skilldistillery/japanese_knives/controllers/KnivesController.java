@@ -91,7 +91,8 @@ public class KnivesController {
 		ModelAndView mv = new ModelAndView();
 		Knives kn = dao.createKnives(knives);
 		mv.addObject("knives", kn);
-		mv.setViewName("createKnives");
+		mv.setViewName("index");
+
 		return mv;
 	}
 
